@@ -92,37 +92,38 @@ command! -nargs=? -bang BuffergatorMruList     :call buffergator#BuffergatorEcho
 
 if !exists('g:buffergator_suppress_keymaps') || !g:buffergator_suppress_keymaps
     " nnoremap <silent> z; :BuffergatorToggle<CR>
+    nnoremap <silent> gb :BuffergatorToggle<CR>
     " nnoremap <silent> z: :BuffergatorTabsToggle<CR>
-    nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
-    nnoremap <silent> <Leader>B :BuffergatorClose<CR>
-    nnoremap <silent> <Leader>t :BuffergatorTabsOpen<CR>
-    nnoremap <silent> <Leader>to :BuffergatorTabsOpen<CR>
-    nnoremap <silent> <Leader>tc :BuffergatorTabsClose<CR>
-    nnoremap <silent> <Leader>T :BuffergatorTabsClose<CR>
+    " nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
+    " nnoremap <silent> <Leader>B :BuffergatorClose<CR>
+    " nnoremap <silent> <Leader>t :BuffergatorTabsOpen<CR>
+    " nnoremap <silent> <Leader>to :BuffergatorTabsOpen<CR>
+    " nnoremap <silent> <Leader>tc :BuffergatorTabsClose<CR>
+    " nnoremap <silent> <Leader>T :BuffergatorTabsClose<CR>
     if !exists('g:buffergator_suppress_mru_switching_keymaps') || !g:buffergator_suppress_mru_switching_keymaps
         if !get(g:, "buffergator_disable_altb_keymaps", 1)
-            nnoremap <silent> <M-b> :BuffergatorMruCyclePrev<CR>
-            nnoremap <silent> <M-S-b> :BuffergatorMruCycleNext<CR>
+            " nnoremap <silent> <M-b> :BuffergatorMruCyclePrev<CR>
+            " nnoremap <silent> <M-S-b> :BuffergatorMruCycleNext<CR>
         endif
         if !exists('g:buffergator_keep_old_mru_switching_keymaps') || !g:buffergator_keep_old_mru_switching_keymaps
-            nnoremap <silent> gb :BuffergatorMruCyclePrev<CR>
-            nnoremap <silent> gB :BuffergatorMruCycleNext<CR>
-            nnoremap <silent> [b :bp<CR>
-            nnoremap <silent> ]b :bn<CR>
+            " nnoremap <silent> gb :BuffergatorMruCyclePrev<CR>
+            " nnoremap <silent> gB :BuffergatorMruCycleNext<CR>
+            " nnoremap <silent> [b :bp<CR>
+            " nnoremap <silent> ]b :bn<CR>
         else
-            nnoremap <silent> [b :BuffergatorMruCyclePrev<CR>
-            nnoremap <silent> ]b :BuffergatorMruCycleNext<CR>
+            " nnoremap <silent> [b :BuffergatorMruCyclePrev<CR>
+            " nnoremap <silent> ]b :BuffergatorMruCycleNext<CR>
         endif
     endif
     if !exists('g:buffergator_suppress_mru_switch_into_splits_keymaps') || !g:buffergator_suppress_mru_switch_into_splits_keymaps
-        nnoremap <silent> <Leader><LEFT> :BuffergatorMruCyclePrev leftabove vert sbuffer<CR>
-        nnoremap <silent> <Leader><UP> :BuffergatorMruCyclePrev leftabove sbuffer<CR>
-        nnoremap <silent> <Leader><RIGHT> :BuffergatorMruCyclePrev rightbelow vert sbuffer<CR>
-        nnoremap <silent> <Leader><DOWN> :BuffergatorMruCyclePrev rightbelow sbuffer<CR>
-        nnoremap <silent> <Leader><S-LEFT> :BuffergatorMruCycleNext leftabove vert sbuffer<CR>
-        nnoremap <silent> <Leader><S-UP> :BuffergatorMruCycleNext leftabove sbuffer<CR>
-        nnoremap <silent> <Leader><S-RIGHT> :BuffergatorMruCycleNext rightbelow vert sbuffer<CR>
-        nnoremap <silent> <Leader><S-DOWN> :BuffergatorMruCycleNext rightbelow sbuffer<CR>
+        " nnoremap <silent> <Leader><LEFT> :BuffergatorMruCyclePrev leftabove vert sbuffer<CR>
+        " nnoremap <silent> <Leader><UP> :BuffergatorMruCyclePrev leftabove sbuffer<CR>
+        " nnoremap <silent> <Leader><RIGHT> :BuffergatorMruCyclePrev rightbelow vert sbuffer<CR>
+        " nnoremap <silent> <Leader><DOWN> :BuffergatorMruCyclePrev rightbelow sbuffer<CR>
+        " nnoremap <silent> <Leader><S-LEFT> :BuffergatorMruCycleNext leftabove vert sbuffer<CR>
+        " nnoremap <silent> <Leader><S-UP> :BuffergatorMruCycleNext leftabove sbuffer<CR>
+        " nnoremap <silent> <Leader><S-RIGHT> :BuffergatorMruCycleNext rightbelow vert sbuffer<CR>
+        " nnoremap <silent> <Leader><S-DOWN> :BuffergatorMruCycleNext rightbelow sbuffer<CR>
     endif
 endif
 
