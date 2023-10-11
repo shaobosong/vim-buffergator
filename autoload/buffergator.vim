@@ -1289,7 +1289,8 @@ function! s:NewBufferCatalogViewer()
             endif
 
             let l:bufnum_str = s:_format_filled(l:bufinfo.bufnum, 3, 1, 0)
-            let l:line = "[" . l:bufnum_str . "]"
+            " let l:line = "[" . l:bufnum_str . "]"
+            let l:line = ""
 
             let l:line .= s:_format_filled(self.line_symbols(l:bufinfo),4,-1,0)
 
@@ -1300,7 +1301,7 @@ function! s:NewBufferCatalogViewer()
             elseif self.display_regime == "parentdir"
                 let l:line .= s:_format_align_left(l:bufinfo.basename, self.max_buffer_basename_len, " ")
                 let l:line .= "  "
-                let l:line .= fnamemodify(l:bufinfo.parentdir, ':p:h:t')
+                let l:line .= fnamemodify(l:bufinfo.parentdir, ':p:.')
             elseif self.display_regime == "filepath"
                 let l:line .= l:bufinfo.filepath
             elseif self.display_regime == "bufname"
