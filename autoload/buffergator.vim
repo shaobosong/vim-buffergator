@@ -60,7 +60,7 @@ if !exists("g:buffergator_sort_regime")
     let g:buffergator_sort_regime = "bufnum"
 endif
 if !exists("g:buffergator_display_regime")
-    let g:buffergator_display_regime = "basename"
+    let g:buffergator_display_regime = "parentdir"
 endif
 if !exists("g:buffergator_show_full_directory_path")
     let g:buffergator_show_full_directory_path = 1
